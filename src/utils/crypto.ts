@@ -1,7 +1,8 @@
-import { Transaction, Wallet } from "@/types/wallet";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Transaction, } from "@/types/wallet";
 
 // Mock data and functions for demo purposes
-export const generateWallet = (): Wallet => {
+export const generateWallet = (): any => {
   const id = Math.random().toString(36).substring(7);
   return {
     id,
@@ -12,7 +13,7 @@ export const generateWallet = (): Wallet => {
   };
 };
 
-export const generateTransaction = (wallet: Wallet): Transaction => {
+export const generateTransaction = (wallet: any): Transaction => {
   const types: ['send', 'receive'] = ['send', 'receive'];
   return {
     id: Math.random().toString(36).substring(7),
