@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import { Wallet as WalletIcon } from 'lucide-react';
-import { Wallet } from '@/types/wallet';
 
 interface WalletCardProps {
-  wallet: Wallet;
+  wallet: any;
   onClick: () => void;
 }
 
