@@ -33,7 +33,7 @@ export default function Home() {
       const subOrgName = `FuseGo Wallet - ${new Date().toISOString()}`;
       const credential = await passkeyClient.createUserPasskey({
         publicKey: {
-          rp: { id: "development", name: "FuseGo" },
+          rp: { id: "fusego.xyz", name: "FuseGo" },
           user: { name: subOrgName, displayName: subOrgName },
         },
       });
