@@ -40,7 +40,7 @@ export default function Home() {
   };
 
   const renderContent = () => {
-    if (!userId) {
+    if (!isAuthenticated) {
       return (
         <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-600 via-blue-500 to-indigo-500 text-white text-center px-6 relative">
           <h1 className="text-5xl font-extrabold mb-4 animate-pulse">Welcome to FuseGo</h1>
