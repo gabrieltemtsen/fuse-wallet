@@ -1,6 +1,6 @@
 # FuseGo 🚀
 
-**FuseGo** is a seamless and user-friendly platform designed to simplify cryptocurrency wallet management and transactions. By integrating **Turnkey**, FuseGo ensures that every user is securely authenticated and automatically set up with a fully functional crypto wallet upon login.
+**FuseGo** is a and user-friendly Dapp designed to simplify cryptocurrency wallet management and transactions. By integrating **Turnkey**, FuseGo ensures that every user is securely authenticated and automatically set up with a fully functional crypto wallet upon login.
 
 ## Vision
 To empower users with a secure, fast, and reliable platform for managing their crypto wallets and assets, all while ensuring a smooth onboarding experience through Turnkey’s advanced wallet solutions.
@@ -23,7 +23,7 @@ To empower users with a secure, fast, and reliable platform for managing their c
 ## Why Turnkey?
 - **Turnkey** provides a robust and secure infrastructure for crypto wallet creation and management.
 - Automatic sub-organization (SubOrg) and wallet creation during user onboarding, saving time and ensuring ease of use.
-- Supports Ethereum and scalable multi-chain integration for future growth.
+- EVM compatibility for future growth.
 
 ## Future Plans
 - Expand support to include multiple blockchains and tokens.
