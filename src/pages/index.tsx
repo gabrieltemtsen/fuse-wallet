@@ -5,15 +5,14 @@ import { CreateWallet } from "@/components/CreateWallet";
 import { Navigation } from "@/components/Navigation";
 import { TransactionList } from "@/components/TransactionList";
 import { WalletCard } from "@/components/WalletCard";
-import { Wallet, Transaction } from "@/types/wallet";
 import { generateWallet, generateTransaction } from "@/utils/crypto";
 import useStoreUserEffect from "@/hooks/useStoreUserEffect";
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("portfolio");
-  const [wallets, setWallets] = useState<Wallet[]>([]);
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [wallets, setWallets] = useState<any[]>([]);
+  const [transactions, setTransactions] = useState<any[]>([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const {isAuthenticated, logout} = useAuth0()
 
@@ -32,7 +31,7 @@ export default function Home() {
     setTransactions(initialTransactions.sort((a, b) => b.timestamp - a.timestamp));
   }, []);
 
-  const handleWalletCreate = (wallet: Wallet) => {
+  const handleWalletCreate = (wallet: any) => {
     setWallets((prev) => [...prev, wallet]);
   };
 
@@ -69,7 +68,7 @@ export default function Home() {
               </h2>
               <p className="text-lg">
                 Your total balance is:
-                <span className="text-4xl font-bold block">{getTotalBalance()} ETH</span>
+                <span className="text-4xl font-bold block">0 ETH</span>
               </p>
             </div>
             <div className="px-4">

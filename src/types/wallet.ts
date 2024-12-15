@@ -8,15 +8,3 @@ export interface Transaction {
   status: 'pending' | 'completed' | 'failed';
 }
 
-export interface Wallet {
-  id: string;
-  name: string;
-  address: string;
-  balance: number;
-  currency: string;
-}
-
-export interface Portfolio {
-  totalBalance: number;
-  wallets: Wallet[];
-}

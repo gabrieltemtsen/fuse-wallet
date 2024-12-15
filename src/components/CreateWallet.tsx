@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import { Wallet, Plus } from 'lucide-react';
-import { generateWallet } from '../utils/crypto';
+import { generateWallet } from '@/utils/crypto';
 
 interface CreateWalletProps {
   onWalletCreate: (wallet: any) => void;

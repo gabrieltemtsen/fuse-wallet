@@ -1,6 +1,6 @@
 import React from 'react';
-import { Wallet } from '../types/wallet';
 import { Wallet as WalletIcon } from 'lucide-react';
+import { Wallet } from '@/types/wallet';
 
 interface WalletCardProps {
   wallet: Wallet;
