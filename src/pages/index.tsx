@@ -14,7 +14,7 @@ export default function Home() {
   const [wallets, setWallets] = useState<any[]>([]);
   const [transactions, setTransactions] = useState<any[]>([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const {isAuthenticated, logout} = useAuth0()
+  const {isAuthenticated, logout, loginWithRedirect} = useAuth0()
 
   const { userId, userInfo } = useStoreUserEffect();
 
@@ -46,6 +46,7 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold mb-4 animate-pulse">Welcome to FuseGo</h1>
           <p className="text-lg mb-8">Your one-stop solution for seamless wallet transactions.</p>
           <button
+            onClick={()=>(loginWithRedirect())}
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg transition-all shadow-lg">
             Login to Get Started
           </button>
