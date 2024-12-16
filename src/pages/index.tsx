@@ -8,6 +8,7 @@ import { WalletCard } from "@/components/WalletCard";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useTurnkey } from "@turnkey/sdk-react";
 import { ToastContainer, toast } from "react-toastify";
+import useStoreUserEffect from "@/hooks/useStoreUserEffect";
 
 export default function Home() {
   const { passkeyClient, turnkey } = useTurnkey();
@@ -19,11 +20,9 @@ export default function Home() {
   const [selectedWallet, setSelectedWallet] = useState<any | null>(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      initializeUserSession();
-    }
-  }, [isAuthenticated]);
+  const {userId, userInfo} = useStoreUserEffect();
+
+
 
   const initializeUserSession = async () => {
     try {
