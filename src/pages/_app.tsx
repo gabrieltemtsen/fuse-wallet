@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import "@/styles/globals.css";
 import { AppProps } from "next/app";
 import Head from "next/head";
@@ -31,11 +32,8 @@ function App({ Component, pageProps }: AppProps) {
       redirect_uri: typeof window !== "undefined" ? window.location.origin : "",
     }}
   >
- <ConvexProviderWithAuth0 client={convex}>
-          <UserContextProvider>
             <Component {...pageProps} />
-          </UserContextProvider>
-        </ConvexProviderWithAuth0>
+       
 
   </Auth0Provider>,
         

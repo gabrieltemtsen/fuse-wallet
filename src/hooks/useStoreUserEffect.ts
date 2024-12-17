@@ -48,7 +48,7 @@ export default function useStoreUserEffect(dynamicData?: any) {
         } else if (typeof result === "string") {
           // Handle case where only an ID is returned
           setUserId(result);
-          setData(dynamicData.tokenIdentifier, result); // Assume tokenIdentifier is passed
+          setData(result, result); // Assume tokenIdentifier is passed
         } else {
           throw new Error("Unexpected result type from storeUser mutation");
         }

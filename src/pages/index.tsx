@@ -8,7 +8,6 @@ import { WalletCard } from "@/components/WalletCard";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useTurnkey } from "@turnkey/sdk-react";
 import { ToastContainer, toast } from "react-toastify";
-import useStoreUserEffect from "@/hooks/useStoreUserEffect";
 
 export default function Home() {
   const { passkeyClient, turnkey } = useTurnkey();
@@ -20,7 +19,7 @@ export default function Home() {
   const [selectedWallet, setSelectedWallet] = useState<any | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const {userId, userInfo} = useStoreUserEffect();
+  
 
 
 
@@ -116,7 +115,7 @@ export default function Home() {
       toast.success("Wallet created successfully!");
     } catch (error) {
       console.error("Error creating wallet:", error);
-      toast.error("Failed to create wallet. Please try again.");
+      toast.error("Failed to create wallet. Please try again, or check if you have your passkeys set.");
     } finally {
       setLoading(false);
     }
